@@ -1,13 +1,12 @@
 <script lang="ts">
-  export let name: string
+  import Chart from './Chart.svelte'
+  import Header from './Header.svelte'
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+<Header count={0} />
+
+<main class="w-screen h-screen">
+  <Chart />
 </main>
 
 <style global>
