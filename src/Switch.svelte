@@ -2,8 +2,8 @@
   import { createEventDispatcher } from 'svelte'
 
   export let name: string
-  export let value: 'left' | 'right'
-  export let className: string | undefined
+  export let selected: 'left' | 'right' | string
+  export let classes: string = undefined
   export let iconSize = 'w-7 h-7'
   export let lhsDimBG = 'bg-white border-white focus:visible:ring-white'
   export let lhsDimFG = 'text-gray-400'
@@ -19,7 +19,7 @@
   export let invertBorder = false
   export let round = true
 
-  $: isLeft = value === 'left'
+  $: isLeft = selected === 'left'
 
   $: lhsBG = !isLeft ? lhsDimBG : lhsLitBG
   $: lhsFG = !isLeft ? lhsDimFG : lhsLitFG
@@ -46,7 +46,7 @@
     'focus-visible:ring-4',
     'focus-visible:ring-opacity-30',
     'transition-colors',
-    className,
+    classes,
   ]
 
   $: rounded = round ? 'rounded-md' : ''
@@ -62,7 +62,7 @@
   }
 </script>
 
-<button name={name} class={buttonClasses.join(' ')} on:click={toggle}>
+<button {name} class={buttonClasses.join(' ')} on:click={toggle}>
   <div class={`${lhsBG} ${outerClass} pl-3`}>
     <div class={`${lhsBG} ${innerClass}`} />
     <div class={`${lhsFG} ${iconClass} left-0`}>

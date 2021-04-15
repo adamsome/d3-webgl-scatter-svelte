@@ -1,6 +1,6 @@
 <script lang="ts">
   export let big = false
-  export let color: string
+  export let color: string = undefined
   export let body = 'text-black dark:text-white'
   export let line = 'text-black dark:text-white'
   export let inner = 'text-white dark:text-black'
