@@ -42,6 +42,23 @@ export default {
     name: 'app',
     file: 'public/build/bundle.js',
   },
+  moduleContext: (id) => {
+    // In order to match native module behaviour, Rollup
+    // sets `this` as `undefined` at the top level of
+    // modules. Rollup also outputs a warning if a module
+    // tries to access `this` at the top level. The
+    // following modules use `this` at the top level and
+    // expect it to be the global `window` object, so we
+    // tell Rollup to set `this = window` for these modules.
+    const thisAsWindowForModules = [
+      'node_modules/countup.js/dist/countUp.min.js',
+      'node_modules/countup.js/dist/countUp.js',
+    ]
+
+    if (thisAsWindowForModules.some((id_) => id.trimRight().endsWith(id_))) {
+      return 'window'
+    }
+  },
   plugins: [
     svelte({
       preprocess: sveltePreprocess({

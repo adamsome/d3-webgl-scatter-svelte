@@ -3,7 +3,7 @@
   import Header from './Header.svelte'
 </script>
 
-<Header count={0} />
+<Header />
 
 <main class="w-screen h-screen">
   <Chart />

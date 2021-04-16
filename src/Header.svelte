@@ -1,10 +1,9 @@
 <script lang="ts">
   import ChromaSelect from './ChromaSelect.svelte'
+  import CountUp from './CountUp.svelte'
   import HexRadiusSlider from './HexRadiusSlider.svelte'
   import Logo from './Logo.svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
-
-  export let count = 0
 </script>
 
 <nav
@@ -37,7 +36,7 @@
     <div
       class="flex-1 text-2xl lg:text-4xl font-extralight ml-4 lg:ml-6 overflow-hidden overflow-ellipsis whitespace-nowrap"
     >
-      {count} data points
+      <CountUp /> data points
     </div>
 
     <HexRadiusSlider classes="hidden lg:flex flex-col ml-6" />

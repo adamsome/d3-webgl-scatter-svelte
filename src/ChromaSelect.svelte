@@ -13,7 +13,7 @@
 
   export let classes = ''
 
-  function updateChroma() {
+  function restoreChroma() {
     const key = $theme === 'light' ? CHROMA_LIGHT_KEY : CHROMA_DARK_KEY
     const storedChroma = localStorage[key]
     if (storedChroma) {
@@ -28,11 +28,11 @@
   }
 
   const unsubscribe = theme.subscribe((value) => {
-    updateChroma()
+    restoreChroma()
   })
 
   onMount(() => {
-    updateChroma()
+    restoreChroma()
   })
 
   function handleChange(
