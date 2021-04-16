@@ -21,10 +21,10 @@
 
     theme.set(stored || (preferred.matches ? 'dark' : 'light'))
 
-    preferred.addEventListener('change', handlePreferredChange)
+    preferred.addEventListener?.('change', handlePreferredChange)
 
     return () => {
-      preferred.removeEventListener('change', handlePreferredChange)
+      preferred.removeEventListener?.('change', handlePreferredChange)
     }
   })
 
