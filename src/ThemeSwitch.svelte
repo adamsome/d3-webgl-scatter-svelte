@@ -4,7 +4,7 @@
   import { theme } from './store/theme'
   import Switch from './Switch.svelte'
 
-  export let classes: string | undefined
+  export let classes = ''
 
   const STORE_KEY = 'theme'
 

@@ -3,7 +3,7 @@
 
   export let name: string
   export let selected: 'left' | 'right' | string
-  export let classes: string = undefined
+  export let classes = ''
   export let iconSize = 'w-7 h-7'
   export let lhsDimBG = 'bg-white border-white focus:visible:ring-white'
   export let lhsDimFG = 'text-gray-400'

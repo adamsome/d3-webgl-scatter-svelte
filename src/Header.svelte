@@ -1,4 +1,5 @@
 <script lang="ts">
+  import HexRadiusSlider from './HexRadiusSlider.svelte'
   import Logo from './Logo.svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
 
@@ -38,6 +39,8 @@
       {count} data points
     </div>
 
+    <HexRadiusSlider classes="hidden lg:flex flex-col ml-6" />
+
     <ThemeSwitch classes="hidden sm:flex flex-col ml-6" />
   </div>
 
@@ -49,11 +52,7 @@
       class="flex flex-col ml-3 sm:ml-1"
       onChange={onChromaChange}
     />
-    <Slider
-      value={hexRadius}
-      class="flex flex-col ml-3"
-      onChange={onHexRadiusChange}
-    />
     -->
+    <HexRadiusSlider classes="flex flex-col ml-3" />
   </div>
 </nav>
