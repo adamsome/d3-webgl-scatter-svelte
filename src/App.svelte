@@ -1,13 +1,10 @@
 <script lang="ts">
-  import Chart from './Chart.svelte'
   import Header from './Header.svelte'
+  import Main from './Main.svelte'
 </script>
 
 <Header />
-
-<main class="w-screen h-screen">
-  <Chart />
-</main>
+<Main />
 
 <style global>
   @tailwind base;
@@ -21,6 +18,56 @@
 
     html.dark {
       @apply bg-black;
+    }
+
+    .chart d3fc-group.cartesian-chart {
+      grid-template-columns: 0 auto 1fr 0 0;
+      grid-template-rows: 0 auto 1fr 1em 0;
+    }
+
+    .x-axis .tick text,
+    .y-axis .tick text {
+      @apply text-black dark:text-white fill-current;
+    }
+
+    .x-axis path.domain,
+    .y-axis path.domain,
+    .x-axis .tick path,
+    .y-axis .tick path {
+      @apply text-black dark:text-white stroke-current;
+    }
+
+    line.gridline-x,
+    line.gridline-y {
+      @apply text-gray-300 dark:text-gray-700 text-opacity-40 dark:text-opacity-75 stroke-current;
+    }
+
+    text.quadrant {
+      @apply text-black dark:text-white fill-current text-2xl font-bold;
+    }
+
+    rect.quadrant {
+      @apply text-gray-200 dark:text-gray-900 text-opacity-75 dark:text-opacity-75 fill-current;
+    }
+
+    .annotations .annotation-note-label,
+    .annotations .annotation-note-title {
+      @apply text-gray-800 dark:text-gray-200 fill-current text-sm;
+    }
+
+    .annotations .annotation-note-title {
+      @apply font-semibold;
+    }
+
+    .annotations .annotation-note-bg {
+      @apply text-gray-200 dark:text-gray-900 text-opacity-75 dark:text-opacity-75 fill-current;
+
+      fill-opacity: 1;
+    }
+
+    .annotations path.connector,
+    .annotations path.note-line {
+      @apply text-black dark:text-white stroke-current;
     }
   }
 

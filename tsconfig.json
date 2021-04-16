@@ -1,6 +1,6 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "public/tsv-parser.js", "public/tsv-stream.worker.js"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
 }
