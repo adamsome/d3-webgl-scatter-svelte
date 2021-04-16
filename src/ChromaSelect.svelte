@@ -11,6 +11,7 @@
   import { chroma } from './store/chroma'
   import { theme } from './store/theme'
 
+  export let id = 'chroma-select'
   export let classes = ''
 
   function restoreChroma() {
@@ -49,10 +50,10 @@
 </script>
 
 <div class={classes}>
-  <FormLabel name="chroma-select">Chromatic Scale</FormLabel>
+  <FormLabel {id}>Chromatic Scale</FormLabel>
   <!-- svelte-ignore a11y-no-onchange -->
   <select
-    name="chroma-select"
+    {id}
     class="w-36 sm:w-48 h-7 border-0 border-transparent bg-gray-300 dark:bg-gray-800 rounded-lg focus:outline-none"
     value={$chroma}
     on:change={handleChange}

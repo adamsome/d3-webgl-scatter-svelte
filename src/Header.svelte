@@ -45,8 +45,8 @@
   </div>
 
   <div class="flex-start w-full lg:hidden pb-3 overflow-y-auto">
-    <ThemeSwitch classes="sm:hidden flex flex-col ml-1" />
-    <ChromaSelect classes="flex flex-col ml-3 sm:ml-1" />
-    <HexRadiusSlider classes="flex flex-col ml-3" />
+    <ThemeSwitch id="hex-radius-sm" classes="sm:hidden flex flex-col ml-1" />
+    <ChromaSelect id="chroma-select-sm" classes="flex flex-col ml-3 sm:ml-1" />
+    <HexRadiusSlider id="theme-switch-sm" classes="flex flex-col ml-3" />
   </div>
 </nav>

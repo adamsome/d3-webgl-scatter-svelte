@@ -4,6 +4,7 @@
   import { theme } from './store/theme'
   import Switch from './Switch.svelte'
 
+  export let id = 'theme-swich'
   export let classes = ''
 
   const STORE_KEY = 'theme'
@@ -40,11 +41,11 @@
 </script>
 
 <div class={classes}>
-  <FormLabel name="theme-switch">Theme</FormLabel>
+  <FormLabel {id}>Theme</FormLabel>
 
   <div class="h-7 flex-center flex-col">
     <Switch
-      name="theme-switch"
+      {id}
       {selected}
       iconSize="w-6 h-6"
       lhsDimBG="bg-gray-800 border-gray-800 focus-visible:ring-gray-800"

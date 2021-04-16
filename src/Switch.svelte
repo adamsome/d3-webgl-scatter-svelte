@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
 
-  export let name: string
+  export let id = 'switch'
   export let selected: 'left' | 'right' | string
   export let classes = ''
   export let iconSize = 'w-7 h-7'
@@ -62,7 +62,12 @@
   }
 </script>
 
-<button {name} class={buttonClasses.join(' ')} on:click={toggle}>
+<button
+  {id}
+  aria-label={id}
+  class={buttonClasses.join(' ')}
+  on:click={toggle}
+>
   <div class={`${lhsBG} ${outerClass} pl-3`}>
     <div class={`${lhsBG} ${innerClass}`} />
     <div class={`${lhsFG} ${iconClass} left-0`}>
