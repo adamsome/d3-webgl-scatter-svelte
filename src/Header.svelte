@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ChromaSelect from './ChromaSelect.svelte'
   import HexRadiusSlider from './HexRadiusSlider.svelte'
   import Logo from './Logo.svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
@@ -40,19 +41,13 @@
     </div>
 
     <HexRadiusSlider classes="hidden lg:flex flex-col ml-6" />
-
+    <ChromaSelect classes="hidden lg:flex flex-col ml-6" />
     <ThemeSwitch classes="hidden sm:flex flex-col ml-6" />
   </div>
 
   <div class="flex-start w-full lg:hidden pb-3 overflow-y-auto">
     <ThemeSwitch classes="sm:hidden flex flex-col ml-1" />
-    <!--
-    <ChromaSelect
-      value={chroma}
-      class="flex flex-col ml-3 sm:ml-1"
-      onChange={onChromaChange}
-    />
-    -->
+    <ChromaSelect classes="flex flex-col ml-3 sm:ml-1" />
     <HexRadiusSlider classes="flex flex-col ml-3" />
   </div>
 </nav>

@@ -7,12 +7,13 @@
 </script>
 
 <div class={classes}>
-  <FormLabel>Hex Radius</FormLabel>
+  <FormLabel name="hex-radius-slider">Hex Radius</FormLabel>
 
   <div
     class="h-7 rounded flex-center flex-col px-2 bg-white bg-opacity-75 dark:bg-black dark:bg-opacity-75"
   >
     <Slider
+      name="hex-radius-slider"
       classes="w-20 sm:w-24"
       value={$hexRadius}
       on:change={(e) => hexRadius.set(e.detail.value)}
