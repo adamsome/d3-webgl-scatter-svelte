@@ -48,7 +48,7 @@
     }
   })
 
-  const unsubscribeHexRadius = hexRadius.subscribe(async (value) => {
+  const unsubscribeHexRadius = hexRadius.subscribe((value) => {
     if (chart) {
       loading = true
       setTimeout(async () => {
@@ -58,7 +58,7 @@
     }
   })
 
-  const unsubscribeChroma = chroma.subscribe(async (value) => {
+  const unsubscribeChroma = chroma.subscribe((value) => {
     if (chart) {
       loading = true
       setTimeout(async () => {
